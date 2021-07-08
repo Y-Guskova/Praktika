@@ -79,7 +79,7 @@ Shar* move(float h, float v, float dt)
 		ct += dt;
 	}
 	WriteShar(output, 0, 0, 0, ct);
-	cout << "Ïîë¸ò îêîí÷åí" << endl;
+	cout << "ÃÃ®Ã«Â¸Ã² Ã®ÃªÃ®Ã­Ã·Ã¥Ã­" << endl;
 	return output;
 };
 
@@ -155,6 +155,22 @@ void testMove()
 	return 0;
 }
 
+void show(Shar shar) // Pechat parametrov
+{
+  float t = 0;
+  Shar c;
+  float deltaT = 1.;           
+
+  for (int i=0; i<100; i++) 
+  {
+     move(&c, deltaT);         
+
+     cout << t;
+     show(c);
+
+     t = t + deltaT;           
+  }
+}
 
 
 
